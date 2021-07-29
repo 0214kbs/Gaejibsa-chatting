@@ -33,6 +33,7 @@
 		E824B80326B32CCB008B8B83 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E824B80226B32CCB008B8B83 /* FirebaseStorage */; };
 		E824B80526B32CCB008B8B83 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = E824B80426B32CCB008B8B83 /* FirebaseDynamicLinks */; };
 		E824B80726B32CCB008B8B83 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = E824B80626B32CCB008B8B83 /* FirebaseFunctions */; };
+		E824B80926B3315F008B8B83 /* chattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E824B80826B3315F008B8B83 /* chattingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		E824B7D326B32C2D008B8B83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E824B7D526B32C2D008B8B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E824B7DB26B32C65008B8B83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E824B80826B3315F008B8B83 /* chattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chattingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				E824B7D526B32C2D008B8B83 /* Info.plist */,
 				E824B7DB26B32C65008B8B83 /* GoogleService-Info.plist */,
 				E824B7D226B32C2D008B8B83 /* Preview Content */,
+				E824B80826B3315F008B8B83 /* chattingView.swift */,
 			);
 			path = chatting2;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E824B80926B3315F008B8B83 /* chattingView.swift in Sources */,
 				E824B7CF26B32C2B008B8B83 /* ContentView.swift in Sources */,
 				E824B7CD26B32C2B008B8B83 /* chatting2App.swift in Sources */,
 			);
