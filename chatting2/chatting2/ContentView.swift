@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UIKit
+import Firebase
 
 struct ContentView: View {
     var body: some View {
@@ -22,7 +23,6 @@ struct ContentView: View {
               //  Chat()
             }
         }
-        
     }
 }
 
