@@ -24,7 +24,6 @@ class HomeModel: ObservableObject{
     func onAppear(){
         
         // checking whether user is joined already
-        
         if user ==  ""{
             //Join Alert
             
@@ -58,7 +57,7 @@ class HomeModel: ObservableObject{
         return alert
     }
     
-    //Firebase로부터 메시지 읽어오기
+    
     func readAllMsgs(){
         ref.collection("Msgs").order(by: "timeStamp", descending: false).addSnapshotListener { (snap,err) in
             if err != nil{
@@ -88,12 +87,12 @@ class HomeModel: ObservableObject{
         let msg = MsgModel(msg: txt, user: user, timeStamp: Date())
         
         let _ = try! ref.collection("Msgs").addDocument(from: msg){ (err) in
+            
             if err != nil{
                 print(err!.localizedDescription)
                 return
             }
-            
-            self.txt = ""
         }
+        self.txt = ""
     }
 }

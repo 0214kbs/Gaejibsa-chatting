@@ -28,7 +28,7 @@ struct Home: View {
             }
             .padding()
             .padding(.top,UIApplication.shared.windows.first?.safeAreaInsets.top)
-            .background(Color("color"))
+            .background(Color("Color"))
             
             
             
@@ -48,7 +48,6 @@ struct Home: View {
                         }
                         .onChange(of: homeData.msgs, perform: {value in
                             
-                            // can restrict only  for current user scroll
                             reader.scrollTo(homeData.msgs.last!.id,anchor: .bottom)
                         })
                     }
@@ -71,7 +70,7 @@ struct Home: View {
                             .font(.system(size: 22))
                             .foregroundColor(.white)
                             .frame(width: 45, height: 45)
-                            .background(Color("color"))
+                            .background(Color("Color"))
                             .clipShape(Circle())
                     })
                 }

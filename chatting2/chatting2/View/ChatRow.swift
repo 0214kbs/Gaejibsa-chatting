@@ -11,12 +11,12 @@ struct ChatRow: View {
     @AppStorage("current_user") var user = ""
     
     var body: some View {
+        
         HStack(spacing: 15){
             
             //Nickname view
             if chatData.user != user{
                 NickName(name: chatData.user)
-                
             }
             
             if chatData.user == user{Spacer(minLength: 0)}
@@ -26,7 +26,7 @@ struct ChatRow: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
                     .padding()
-                    .background(Color("color"))
+                    .background(Color("Color"))
                     //Custom Shape
                     .clipShape(ChatBubble(myMsg: chatData.user == user))
                 
@@ -53,6 +53,7 @@ struct ChatRow: View {
 struct NickName : View{
     var name : String
     @AppStorage("current_user") var user = ""
+  
     var body: some View{
         
         Text(String(name.first!))
