@@ -1,13 +1,13 @@
 //
-//  chatting2App.swift
-//  chatting2
+//  chatting3App.swift
+//  chatting3
 //
-//  Created by 곽보선 on 2021/07/30.
+//  Created by 곽보선 on 2021/07/31.
 //
 
 import SwiftUI
-import Firebase
 import UIKit
+import Firebase
 
 @main
 struct chatting3App: App {
