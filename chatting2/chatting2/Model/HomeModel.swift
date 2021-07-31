@@ -17,9 +17,9 @@ class HomeModel: ObservableObject{
     
     let ref = Firestore.firestore()
     
-//    init(){
-//        readAllMsgs()
-//    }
+    init(){
+        readAllMsgs()
+    }
     
     func onAppear(){
         
@@ -58,29 +58,42 @@ class HomeModel: ObservableObject{
         return alert
     }
     
-//    //Firebase로부터 메시지 읽어오기
-//    func readAllMsgs(){
-//        ref.collection("Msgs").addSnapshotListener { (snap,err) in
-//            if err != nil{
-//                print(err!.localizedDescription)
-//                return
-//            }
-//
-//            guard let data = snap else{return}
-//
-//            data.documentChanges.forEach{(doc) in
-//
-//                //adding when data is added
-//
-//                if doc.type == .added{
-//
-//                    let msg = try! doc.document.data(as: MsgModel.self)!
-//
-//                    DispatchQueue.main.async {
-//                        self.msgs.append(msg)
-//                    }
-//                }
-//            }
-//        }
-//    }
+    //Firebase로부터 메시지 읽어오기
+    func readAllMsgs(){
+        ref.collection("Msgs").order(by: "timeStamp", descending: false).addSnapshotListener { (snap,err) in
+            if err != nil{
+                print(err!.localizedDescription)
+                return
+            }
+
+            guard let data = snap else{return}
+
+            data.documentChanges.forEach{(doc) in
+
+                //adding when data is added
+
+                if doc.type == .added{
+
+                    let msg = try! doc.document.data(as: MsgModel.self)!
+
+                    DispatchQueue.main.async {
+                        self.msgs.append(msg)
+                    }
+                }
+            }
+        }
+    }
+    
+    func writeMsg(){
+        let msg = MsgModel(msg: txt, user: user, timeStamp: Date())
+        
+        let _ = try! ref.collection("Msgs").addDocument(from: msg){ (err) in
+            if err != nil{
+                print(err!.localizedDescription)
+                return
+            }
+            
+            self.txt = ""
+        }
+    }
 }

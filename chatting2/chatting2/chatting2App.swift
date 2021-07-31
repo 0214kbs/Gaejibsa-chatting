@@ -9,10 +9,12 @@ import SwiftUI
 import Firebase
 import UIKit
 
+
 @main
 struct chatting3App: App {
-    
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    init() {
+        FirebaseApp.configure()
+    }
     
     var body: some Scene {
         WindowGroup {
@@ -20,7 +22,6 @@ struct chatting3App: App {
         }
     }
 }
-
 
 class AppDelegate : NSObject, UIApplicationDelegate{
     

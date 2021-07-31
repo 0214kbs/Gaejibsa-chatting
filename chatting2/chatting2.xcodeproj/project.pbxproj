@@ -11,8 +11,6 @@
 		E824B7CF26B32C2B008B8B83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E824B7CE26B32C2B008B8B83 /* ContentView.swift */; };
 		E824B7D126B32C2D008B8B83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E824B7D026B32C2D008B8B83 /* Assets.xcassets */; };
 		E824B7D426B32C2D008B8B83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E824B7D326B32C2D008B8B83 /* Preview Assets.xcassets */; };
-		E824B7DC26B32C65008B8B83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E824B7DB26B32C65008B8B83 /* GoogleService-Info.plist */; };
-		E824B80B26B3E59C008B8B83 /* chattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E824B80A26B3E59C008B8B83 /* chattingView.swift */; };
 		E824B80F26B3E601008B8B83 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E824B80E26B3E601008B8B83 /* Home.swift */; };
 		E824B81126B3E671008B8B83 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E824B81026B3E671008B8B83 /* HomeModel.swift */; };
 		E824B81526B3E6D7008B8B83 /* MsgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E824B81426B3E6D7008B8B83 /* MsgModel.swift */; };
@@ -39,6 +37,7 @@
 		E824B85226B5271B008B8B83 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = E824B85126B5271B008B8B83 /* FirebaseFunctions */; };
 		E824B8D426B542AB008B8B83 /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E824B8D326B542AB008B8B83 /* ChatRow.swift */; };
 		E824B8D626B542C2008B8B83 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = E824B8D526B542C2008B8B83 /* ChatBubble.swift */; };
+		E856205026B5760600C6DCAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E856204F26B5760600C6DCAB /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,13 +47,12 @@
 		E824B7D026B32C2D008B8B83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E824B7D326B32C2D008B8B83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E824B7D526B32C2D008B8B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E824B7DB26B32C65008B8B83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E824B80A26B3E59C008B8B83 /* chattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chattingView.swift; sourceTree = "<group>"; };
 		E824B80E26B3E601008B8B83 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		E824B81026B3E671008B8B83 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		E824B81426B3E6D7008B8B83 /* MsgModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgModel.swift; sourceTree = "<group>"; };
 		E824B8D326B542AB008B8B83 /* ChatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRow.swift; sourceTree = "<group>"; };
 		E824B8D526B542C2008B8B83 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		E856204F26B5760600C6DCAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,15 +106,14 @@
 		E824B7CB26B32C2B008B8B83 /* chatting2 */ = {
 			isa = PBXGroup;
 			children = (
-				E824B80D26B3E5D6008B8B83 /* View */,
 				E824B80C26B3E5CF008B8B83 /* Model */,
+				E824B80D26B3E5D6008B8B83 /* View */,
 				E824B7CC26B32C2B008B8B83 /* chatting2App.swift */,
 				E824B7CE26B32C2B008B8B83 /* ContentView.swift */,
 				E824B7D026B32C2D008B8B83 /* Assets.xcassets */,
 				E824B7D526B32C2D008B8B83 /* Info.plist */,
-				E824B7DB26B32C65008B8B83 /* GoogleService-Info.plist */,
+				E856204F26B5760600C6DCAB /* GoogleService-Info.plist */,
 				E824B7D226B32C2D008B8B83 /* Preview Content */,
-				E824B80A26B3E59C008B8B83 /* chattingView.swift */,
 			);
 			path = chatting2;
 			sourceTree = "<group>";
@@ -233,7 +230,7 @@
 			files = (
 				E824B7D426B32C2D008B8B83 /* Preview Assets.xcassets in Resources */,
 				E824B7D126B32C2D008B8B83 /* Assets.xcassets in Resources */,
-				E824B7DC26B32C65008B8B83 /* GoogleService-Info.plist in Resources */,
+				E856205026B5760600C6DCAB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +241,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E824B80B26B3E59C008B8B83 /* chattingView.swift in Sources */,
 				E824B7CF26B32C2B008B8B83 /* ContentView.swift in Sources */,
 				E824B80F26B3E601008B8B83 /* Home.swift in Sources */,
 				E824B81526B3E6D7008B8B83 /* MsgModel.swift in Sources */,
@@ -389,7 +385,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "https---github.com-bosunKwak.chatting2";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bosunKwak.chatting2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -411,7 +407,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "https---github.com-bosunKwak.chatting2";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bosunKwak.chatting2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
