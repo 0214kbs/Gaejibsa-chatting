@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import Foundation
+
 
 struct Home: View {
-    
+    //
+//    @ObservedObject private var kGuardian = KeyboardGuardian(textFieldCount: 1)
+        //
+
     @StateObject var homeData = HomeModel()
     @AppStorage("current_user") var user = ""
     @State var scrolled = false
@@ -29,9 +34,32 @@ struct Home: View {
             .padding()
             .padding(.top,UIApplication.shared.windows.first?.safeAreaInsets.top)
             .background(Color("Color"))
-            
-            
-            
+            // ///////////////////////////////////////////////////////////////
+//            GeometryReader{ reader in
+//                ScrollView{
+//                    let columns = [GridItem(.flexible(minimum: 10))]
+//                    LazyVGrid(columns: columns, spacing: 0){
+//                        ForEach(homeData.msgs) { message in
+//                            let isReceived = message.type == .Received
+//                            HStack{
+//                                ZStack{
+//                                    Text(message.text)
+//                                        .padding(.horizontal)
+//                                        .padding(.vertical, 12)
+//                                        .background(isReceived ? Color.black.opacity(0.2) : .green.opacity(0.9))
+//                                }
+//                                .frame(width: viewWidth * 0.7, alignmnet: isReceived ? .leading : .trailing)
+//                                .padding(.vertical)
+//                                .background(Color.blue)
+//                            }
+//                            .frame(maxWidth: .infinity, alignmnet: isReceived ? .leading : .trailing)
+//                            .id(message.id)
+//                        }
+//                    }
+//                    .padding(.horizontal)
+//                }
+//            }
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             ScrollViewReader{reader in
                 ScrollView{
                     VStack(spacing: 15){
@@ -57,6 +85,7 @@ struct Home: View {
 
             HStack(spacing: 15){
                 TextField("Enter Message", text: $homeData.txt)
+//                    .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
                     //Fixed Height for Animation
                     .frame(height: 45)
@@ -68,13 +97,14 @@ struct Home: View {
                     Button(action: homeData.writeMsg, label: {
                         Image(systemName: "paperplane.fill")
                             .font(.system(size: 22))
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                             .frame(width: 45, height: 45)
                             .background(Color("Color"))
                             .clipShape(Circle())
                     })
                 }
             }
+//            .offset(y: kGuardian.slide).animation(.easeInOut(duration: 1.0))
             .animation(.default)
             .padding()
         }

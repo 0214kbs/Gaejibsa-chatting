@@ -19,12 +19,16 @@ struct ChatRow: View {
                 NickName(name: chatData.user)
             }
             
-            if chatData.user == user{Spacer(minLength: 0)}
+            if chatData.user == user{
+                Spacer(minLength: 0)
+                
+            }
             
             VStack(alignment: chatData.user == user ? .trailing : .leading, spacing: 5, content: {
+                //메시지창
                 Text(chatData.msg)
                     .fontWeight(.semibold)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .padding()
                     .background(Color("Color"))
                     //Custom Shape
@@ -39,10 +43,12 @@ struct ChatRow: View {
             
             if chatData.user == user{
                 NickName(name: chatData.user)
-                
             }
             
-            if chatData.user != user{Spacer(minLength: 0)}
+            if chatData.user != user{
+                Spacer(minLength: 0)
+                
+            }
         }
         .padding(.horizontal)
         //For Scroll Reader
@@ -58,7 +64,7 @@ struct NickName : View{
         
         Text(String(name.first!))
             .fontWeight(.heavy)
-            .foregroundColor(.white)
+            .foregroundColor(.white) 
             .frame(width: 50, height: 50)
             .background((name == user ? Color.blue : Color.green).opacity(0.5))
             .clipShape(Circle())
