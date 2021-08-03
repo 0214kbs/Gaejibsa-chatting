@@ -24,9 +24,10 @@ struct Home: View {
             
             //Top NavBar
             HStack{
-                //
-                
-                //
+                Button(action: {
+                }) {
+                    Image(systemName: "arrow.left")
+                }
                 Text("상대방 이름")
                     .font(.title)
                     .fontWeight(.heavy)
@@ -73,7 +74,6 @@ struct Home: View {
                     .clipShape(Capsule())
                 
                 if homeData.txt != ""{
-                    
                     Button(action: homeData.writeMsg, label: {
                         Image(systemName: "paperplane.fill")
                             .font(.system(size: 22))
@@ -100,7 +100,6 @@ struct MyButton: View{
     
     var body: some View{
         Button(action:{
-            print("button")
         }){
             HStack{
                 Text(title)
