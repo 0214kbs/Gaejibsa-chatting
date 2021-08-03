@@ -24,6 +24,9 @@ struct Home: View {
             
             //Top NavBar
             HStack{
+                //
+                
+                //
                 Text("상대방 이름")
                     .font(.title)
                     .fontWeight(.heavy)
