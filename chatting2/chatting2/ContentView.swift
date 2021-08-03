@@ -10,21 +10,21 @@ import UIKit
 import Firebase
 
 struct ContentView: View{
+    
     var body: some View{
-        ZStack{
-            VStack{
-                // chatting list 
-            }
-        }
         ZStack{
             Home()
         }
     }
 }
 
+
 struct ContentView_Previews: PreviewProvider{
+    
     static var previews: some View{
+        
         ContentView()
+        
     }
 }
 
