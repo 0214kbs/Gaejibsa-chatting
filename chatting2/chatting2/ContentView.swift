@@ -11,7 +11,14 @@ import Firebase
 
 struct ContentView: View{
     var body: some View{
-        Home()
+        ZStack{
+            VStack{
+                // chatting list 
+            }
+        }
+        ZStack{
+            Home()
+        }
     }
 }
 
@@ -20,3 +27,4 @@ struct ContentView_Previews: PreviewProvider{
         ContentView()
     }
 }
+

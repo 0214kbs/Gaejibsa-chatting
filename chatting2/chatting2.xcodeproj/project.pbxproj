@@ -38,6 +38,7 @@
 		E824B8D426B542AB008B8B83 /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E824B8D326B542AB008B8B83 /* ChatRow.swift */; };
 		E824B8D626B542C2008B8B83 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = E824B8D526B542C2008B8B83 /* ChatBubble.swift */; };
 		E856205026B5760600C6DCAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E856204F26B5760600C6DCAB /* GoogleService-Info.plist */; };
+		E856205226B9908100C6DCAB /* keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856205126B9908100C6DCAB /* keyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		E824B8D326B542AB008B8B83 /* ChatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRow.swift; sourceTree = "<group>"; };
 		E824B8D526B542C2008B8B83 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		E856204F26B5760600C6DCAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E856205126B9908100C6DCAB /* keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				E824B80E26B3E601008B8B83 /* Home.swift */,
 				E824B8D326B542AB008B8B83 /* ChatRow.swift */,
 				E824B8D526B542C2008B8B83 /* ChatBubble.swift */,
+				E856205126B9908100C6DCAB /* keyboard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				E824B7CF26B32C2B008B8B83 /* ContentView.swift in Sources */,
 				E824B80F26B3E601008B8B83 /* Home.swift in Sources */,
+				E856205226B9908100C6DCAB /* keyboard.swift in Sources */,
 				E824B81526B3E6D7008B8B83 /* MsgModel.swift in Sources */,
 				E824B81126B3E671008B8B83 /* HomeModel.swift in Sources */,
 				E824B8D426B542AB008B8B83 /* ChatRow.swift in Sources */,

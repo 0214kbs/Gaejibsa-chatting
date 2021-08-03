@@ -7,12 +7,10 @@
 
 import SwiftUI
 import Foundation
-
+import Combine
 
 struct Home: View {
-    //
-//    @ObservedObject private var kGuardian = KeyboardGuardian(textFieldCount: 1)
-        //
+
 
     @StateObject var homeData = HomeModel()
     @AppStorage("current_user") var user = ""
@@ -66,7 +64,6 @@ struct Home: View {
 
             HStack(spacing: 15){
                 TextField("Enter Message", text: $homeData.txt)
-//                    .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
                     //Fixed Height for Animation
                     .frame(height: 45)
@@ -84,7 +81,6 @@ struct Home: View {
                     })
                 }
             }
-//            .offset(y: kGuardian.slide).animation(.easeInOut(duration: 1.0))
             .animation(.default)
             .padding()
         }
@@ -115,3 +111,5 @@ struct MyButton: View{
         }
     }
 }
+
+
