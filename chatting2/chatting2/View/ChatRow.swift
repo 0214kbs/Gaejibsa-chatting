@@ -28,9 +28,9 @@ struct ChatRow: View {
                 //메시지창
                 Text(chatData.msg)
                     .fontWeight(.semibold)
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                     .padding()
-                    .background(Color("Color"))
+                    .background(Color.blue)
                     //Custom Shape
                     .clipShape(ChatBubble(myMsg: chatData.user == user))
                 

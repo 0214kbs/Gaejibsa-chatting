@@ -24,42 +24,19 @@ struct Home: View {
             
             //Top NavBar
             HStack{
-                Text("개집사")
+                Text("상대방 이름")
                     .font(.title)
                     .fontWeight(.heavy)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                 
                 Spacer(minLength: 0)
             }
             .padding()
             .padding(.top,UIApplication.shared.windows.first?.safeAreaInsets.top)
-            .background(Color("Color"))
-            // ///////////////////////////////////////////////////////////////
-//            GeometryReader{ reader in
-//                ScrollView{
-//                    let columns = [GridItem(.flexible(minimum: 10))]
-//                    LazyVGrid(columns: columns, spacing: 0){
-//                        ForEach(homeData.msgs) { message in
-//                            let isReceived = message.type == .Received
-//                            HStack{
-//                                ZStack{
-//                                    Text(message.text)
-//                                        .padding(.horizontal)
-//                                        .padding(.vertical, 12)
-//                                        .background(isReceived ? Color.black.opacity(0.2) : .green.opacity(0.9))
-//                                }
-//                                .frame(width: viewWidth * 0.7, alignmnet: isReceived ? .leading : .trailing)
-//                                .padding(.vertical)
-//                                .background(Color.blue)
-//                            }
-//                            .frame(maxWidth: .infinity, alignmnet: isReceived ? .leading : .trailing)
-//                            .id(message.id)
-//                        }
-//                    }
-//                    .padding(.horizontal)
-//                }
-//            }
-            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            .background(Color.white)
+            
+            MyButton(title: "산책 시작").padding()
+            
             ScrollViewReader{reader in
                 ScrollView{
                     VStack(spacing: 15){
@@ -112,5 +89,27 @@ struct Home: View {
             homeData.onAppear()
         })
         .ignoresSafeArea(.all, edges: .top)
+    }
+}
+
+struct MyButton: View{
+    var title: String
+    
+    var body: some View{
+        Button(action:{
+            print("button")
+        }){
+            HStack{
+                Text(title)
+                    .fontWeight(.semibold)
+                    .font(.title)
+                    .minimumScaleFactor(0.5)
+            }
+            .padding()
+            .frame(width: 300, height: 30)
+            .foregroundColor(.black)
+            .background(Color.yellow)
+            .cornerRadius(40)
+        }
     }
 }
