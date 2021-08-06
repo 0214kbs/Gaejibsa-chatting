@@ -22,11 +22,13 @@ struct Home: View {
             
             //Top NavBar
             HStack{
-                Button(action: {
-                }) {
-                    Image(systemName: "arrow.left")
-                }
-                Text("상대방 이름")
+//                Button(action: {
+//                }) {
+//                    Image(systemName: "arrow.left")
+//                }
+
+                //Text("상대방 이름")
+                Text("김철수")
                     .font(.title)
                     .fontWeight(.heavy)
                     .foregroundColor(.black)
@@ -88,6 +90,7 @@ struct Home: View {
             homeData.onAppear()
         })
         .ignoresSafeArea(.all, edges: .top)
+
     }
 }
 

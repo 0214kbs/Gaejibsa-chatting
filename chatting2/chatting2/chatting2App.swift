@@ -9,17 +9,6 @@ import SwiftUI
 import Firebase
 import UIKit
 
-//@main
-//struct chatting3App: App {
-//
-//    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-//
-//    var body: some Scene {
-//        WindowGroup {
-//            ContentView()
-//        }
-//    }
-//}
 
 @main
 struct chatting3App: App {

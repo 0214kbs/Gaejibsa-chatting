@@ -2,7 +2,7 @@
 //  ChatId.swift
 //  chatting2
 //
-//  Created by 곽보선 on 2021/08/04.
+//  Created by 곽보선 on 2021/08/06.
 //
 
 import SwiftUI
@@ -17,7 +17,7 @@ struct ChatId{
 extension ChatId{
     static func all() -> [ChatId]{
         return[
-            ChatId(id: "김철수", imageUrl: "chat1", txt: "네"),
+            ChatId(id: "김철수", imageUrl: "chat1", txt: "hi"),
             ChatId(id: "나는야짱", imageUrl: "chat2",txt: "안녕하세요"),
             ChatId(id: "럭키엄마", imageUrl: "chat3",txt: "아쉽네요")
         ]

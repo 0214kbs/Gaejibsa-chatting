@@ -14,8 +14,8 @@ class HomeModel: ObservableObject{
     @Published var txt = ""
     @Published var msgs : [MsgModel] = []
     @AppStorage("current_user") var user = ""
-    
-    let ref = Firestore.firestore()
+
+    let db = Firestore.firestore()
     
     init(){
         readAllMsgs()
@@ -26,7 +26,6 @@ class HomeModel: ObservableObject{
         // checking whether user is joined already
         if user ==  ""{
             //Join Alert
-            
             UIApplication.shared.windows.first?.rootViewController?.present(alertView(), animated: true)
         }
     }
@@ -59,17 +58,19 @@ class HomeModel: ObservableObject{
     
     
     func readAllMsgs(){
-        ref.collection("Msgs").order(by: "timeStamp", descending: false).addSnapshotListener { (snap,err) in
-            if err != nil{
-                print(err!.localizedDescription)
-                return
-            }
+        
+            db.collection("Msgs")
+                //.whereField("id", isEqualTo: name)
+                .order(by: "timeStamp", descending: false).addSnapshotListener { (snap,err) in
+                    if err != nil{
+                        print(err!.localizedDescription)
+                        return
+                    }
 
+            
             guard let data = snap else{return}
 
             data.documentChanges.forEach{(doc) in
-
-                //adding when data is added
 
                 if doc.type == .added{
 
@@ -86,7 +87,7 @@ class HomeModel: ObservableObject{
     func writeMsg(){
         let msg = MsgModel(msg: txt, user: user, timeStamp: Date())
         
-        let _ = try! ref.collection("Msgs").addDocument(from: msg){ (err) in
+        let _ = try! db.collection("Msgs").addDocument(from: msg){ (err) in
             
             if err != nil{
                 print(err!.localizedDescription)
