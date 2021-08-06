@@ -6,25 +6,61 @@
 //
 
 import SwiftUI
-import UIKit
-import Firebase
 
-struct ContentView: View{
+
+struct ContentView: View {
+    @State var text : String = ""
+
+    let chatIds = ChatId.all()
     
     var body: some View{
-        ZStack{
-            Home()
+        
+        NavigationView{
+            NavigationLink(destination: ContentViewSec()){
+                
+                VStack(spacing: 0){
+                    //search
+                    HStack{
+                        searchBar(text: self.$text)
+                    }
+                    .padding()
+                    
+                    List(self.chatIds, id: \.id){ chatId in
+                        NavigationLink(destination: Text(chatId.id)){
+                            ChatIdCell(chatId: chatId)
+                        }
+                    }
+                }
+                
+            }
         }
     }
 }
 
-
-struct ContentView_Previews: PreviewProvider{
-    
-    static var previews: some View{
-        
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
         ContentView()
-        
     }
 }
 
+
+
+struct ContentViewSec: View {
+
+    //let chatIds = ChatId.all()
+    //let name = chatIds.id
+    
+    var body: some View {
+        VStack(){
+            Home()
+        }
+        //.navigationBarTitle(name)
+    }
+    
+}
+
+struct ContentViewSec_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentViewSec()
+    }
+}
