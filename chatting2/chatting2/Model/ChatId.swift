@@ -18,7 +18,7 @@ extension ChatId{
     static func all() -> [ChatId]{
         return[
             ChatId(id: "김철수", imageUrl: "chat1", txt: "hi"),
-            ChatId(id: "나는야짱", imageUrl: "chat2",txt: "안녕하세요"),
+            ChatId(id: "나는야짱", imageUrl: "chat2",txt: "넵 금욜에 뵙겠습니다."),
             ChatId(id: "럭키엄마", imageUrl: "chat3",txt: "아쉽네요")
         ]
     }

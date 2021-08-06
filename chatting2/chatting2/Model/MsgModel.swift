@@ -22,4 +22,5 @@ struct MsgModel: Codable, Identifiable,Hashable{
         case user
         case timeStamp
     }
+    
 }

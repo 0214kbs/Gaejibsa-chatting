@@ -51,7 +51,6 @@ struct ChatRow: View {
             }
         }
         .padding(.horizontal)
-        //For Scroll Reader
         .id(chatData.id)
     }
 }

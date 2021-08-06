@@ -9,7 +9,9 @@ import SwiftUI
 import Foundation
 
 struct Keyboard : ViewModifier{
+    
     @State var offset : CGFloat = 0
+    
     func body(content: Content) -> some View{
         content.padding(.bottom, offset).onAppear{
             NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main){ (notification) in

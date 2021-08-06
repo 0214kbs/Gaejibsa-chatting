@@ -8,7 +8,6 @@
 import SwiftUI
 import Firebase
 
-
 class HomeModel: ObservableObject{
     
     @Published var txt = ""

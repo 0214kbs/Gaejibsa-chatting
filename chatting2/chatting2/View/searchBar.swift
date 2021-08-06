@@ -44,8 +44,6 @@ struct searchBar: View{
                 ).onTapGesture {
                     self.editText = true
                 }
-
         }
     }
-
 }

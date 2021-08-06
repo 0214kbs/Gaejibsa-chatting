@@ -9,8 +9,8 @@ import SwiftUI
 
 
 struct ContentView: View {
+    
     @State var text : String = ""
-
     let chatIds = ChatId.all()
     
     var body: some View{
@@ -31,7 +31,7 @@ struct ContentView: View {
                         }
                     }
                 }
-                
+            
             }
         }
     }
