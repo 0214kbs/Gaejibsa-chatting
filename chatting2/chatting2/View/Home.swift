@@ -11,7 +11,6 @@ import Combine
 
 struct Home: View {
 
-
     @StateObject var homeData = HomeModel()
     @AppStorage("current_user") var user = ""
     @State var scrolled = false
@@ -22,19 +21,22 @@ struct Home: View {
             
             //Top NavBar
             HStack{
-
+                
+                // 상대방을 설정할 수 있도록 하면 상대방이름이 뜨도록 하려고 했는데 실패
                 //Text("상대방 이름")
                 Text("김철수")
                     .font(.title)
                     .fontWeight(.heavy)
                     .foregroundColor(.black)
-                
+            
                 Spacer(minLength: 0)
             }
             .padding()
             .padding(.top,UIApplication.shared.windows.first?.safeAreaInsets.top)
             .background(Color.white)
             
+            
+            //산책시작 버튼
             MyButton(title: "산책 시작").padding()
             
             ScrollViewReader{reader in
@@ -60,6 +62,10 @@ struct Home: View {
                 }
             }
 
+            
+            // 문자 쳐서 보내는 코드
+            // TextField에 "Enter Message"가 나와있고 글자 하나라도 치면 옆에 paperplane 아이콘이 뜸
+            // 해당 아이콘 누르면 "writeMsg" 수행
             HStack(spacing: 15){
                 TextField("Enter Message", text: $homeData.txt)
                     .padding(.horizontal)
@@ -74,7 +80,6 @@ struct Home: View {
                             .font(.system(size: 22))
                             .foregroundColor(.black)
                             .frame(width: 45, height: 45)
-                            .background(Color("Color"))
                             .clipShape(Circle())
                     })
                 }

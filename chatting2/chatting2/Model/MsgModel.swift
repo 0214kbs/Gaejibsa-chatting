@@ -9,6 +9,7 @@ import SwiftUI
 import Firebase
 import FirebaseFirestoreSwift
 
+//firebase에 저장할 info
 struct MsgModel: Codable, Identifiable,Hashable{
    
     @DocumentID var id: String?

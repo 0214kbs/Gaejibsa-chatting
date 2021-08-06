@@ -5,9 +5,11 @@
 //  Created by 곽보선 on 2021/08/06.
 //
 
+
 import SwiftUI
 import Firebase
 
+//chatting list에 보여주는 내용들
 struct ChatId{
     let id: String
     let imageUrl: String

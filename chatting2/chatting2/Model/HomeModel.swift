@@ -20,9 +20,12 @@ class HomeModel: ObservableObject{
         readAllMsgs()
     }
     
+    // 이부분이 문제!! (onAppear(), alertView() )
+    // 처음 시뮬레이터를 돌리게 되면
+    // Join화면이 나오게 됨!
+    // 채팅을 보내는 사람의 이름을 입력하면 됨 -> user에 저장
     func onAppear(){
         
-        // checking whether user is joined already
         if user ==  ""{
             //Join Alert
             UIApplication.shared.windows.first?.rootViewController?.present(alertView(), animated: true)
@@ -55,7 +58,7 @@ class HomeModel: ObservableObject{
         return alert
     }
     
-    
+    //firebase로부터 정보 불러오기
     func readAllMsgs(){
         
             db.collection("Msgs")
@@ -83,6 +86,7 @@ class HomeModel: ObservableObject{
         }
     }
     
+    //firebase에 정보 저장
     func writeMsg(){
         let msg = MsgModel(msg: txt, user: user, timeStamp: Date())
         

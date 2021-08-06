@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//말풍선모양
 struct ChatBubble: Shape{
     
     var myMsg : Bool
